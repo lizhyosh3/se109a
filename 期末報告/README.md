@@ -143,6 +143,7 @@ int main()
 
 每次合併時，因為沿著兩個要結合的左偏樹最右邊的路徑向下移動，根據引理可知路徑長度最多為對數等級，而每一層的操作為常數等級。假設兩棵樹的大小分別為 m 和 n ，那麼 Merge 的複雜度為 O(log m + log n)。
 <br />
+<br />
 由此可知 Insert 和 Delete-Min 的複雜度也為 O(log n)。
 
 ### 引理
@@ -153,14 +154,19 @@ int main()
 
 左偏樹可以實現二元堆積的一切功能，而且還能實現二元堆積不易實現的合併，但左偏樹的算法時間常數要大於二元堆積，所以不能完全代替之。
 <br />
+<br />
 和平衡樹相比，左偏樹採取了與平衡樹完全相反的構造策略。平衡樹爲了實現所有元素的快速查找，使節點儘量趨於平衡。而左偏樹的目的是實現快速的查詢最小值與合併操作，恰恰要讓節點儘量向左偏。
-**bold** 最優的平衡樹，恰恰是最差的左偏樹，而最優的左偏樹，恰恰是平衡樹退化的結果。
+**最優的平衡樹，恰恰是最差的左偏樹，而最優的左偏樹，恰恰是平衡樹退化的結果。**
+<br />
 <br />
 斜堆積、二項式堆積、斐波那契堆積也是可並堆實現的有效方法，而且二項式堆積、斐波那契堆積實際中會比左偏樹更快，但是在時間與編程複雜度的性價比上，左偏樹有著絕對的優勢。
 
 ## 參考資料
 
 [https://zh.wikipedia.org/wiki/%E5%B7%A6%E5%81%8F%E6%A0%91](https://zh.wikipedia.org/wiki/%E5%B7%A6%E5%81%8F%E6%A0%91)
+<br />
 [https://byvoid.com/zht/blog/leftist-tree/](https://byvoid.com/zht/blog/leftist-tree/)
+<br />
 [https://tmt514.gitbooks.io/2016-09/content/tree-ds/leftist-tree.html](https://tmt514.gitbooks.io/2016-09/content/tree-ds/leftist-tree.html)
+<br />
 [https://blog.csdn.net/nkwbtb/article/details/21938675](https://blog.csdn.net/nkwbtb/article/details/21938675)
